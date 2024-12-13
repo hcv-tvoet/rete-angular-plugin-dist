@@ -1,0 +1,31 @@
+import { OnInit, ChangeDetectorRef, OnChanges, ViewContainerRef, ComponentFactoryResolver, ComponentRef } from '@angular/core';
+import { ClassicPreset } from 'rete';
+import { Position } from '../../../../types';
+import * as i0 from "@angular/core";
+type PositionWatcher = (cb: (value: Position) => void) => (() => void);
+export declare class ConnectionWrapperComponent implements OnInit, OnChanges {
+    private cdr;
+    viewContainerRef: ViewContainerRef;
+    private componentFactoryResolver;
+    data: ClassicPreset.Connection<ClassicPreset.Node, ClassicPreset.Node>;
+    start: Position | PositionWatcher;
+    end: Position | PositionWatcher;
+    path: (start: Position, end: Position) => Promise<string>;
+    rendered: any;
+    connectionComponent: any;
+    seed: number;
+    ref: ComponentRef<any>;
+    startOb: Position | null;
+    get _start(): Position | null;
+    endOb: Position | null;
+    get _end(): Position | null;
+    _path: string;
+    constructor(cdr: ChangeDetectorRef, viewContainerRef: ViewContainerRef, componentFactoryResolver: ComponentFactoryResolver);
+    ngOnChanges(): Promise<void>;
+    updatePath(): Promise<void>;
+    ngOnInit(): void;
+    update(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ConnectionWrapperComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ConnectionWrapperComponent, "ng-component", never, { "data": { "alias": "data"; "required": false; }; "start": { "alias": "start"; "required": false; }; "end": { "alias": "end"; "required": false; }; "path": { "alias": "path"; "required": false; }; "rendered": { "alias": "rendered"; "required": false; }; "connectionComponent": { "alias": "connectionComponent"; "required": false; }; "seed": { "alias": "seed"; "required": false; }; }, {}, never, never, true, never>;
+}
+export {};
