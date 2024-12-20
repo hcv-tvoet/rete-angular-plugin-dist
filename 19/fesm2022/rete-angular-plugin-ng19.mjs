@@ -580,13 +580,15 @@ class ContextMenuItemComponent {
         } if (rf & 2) {
             i0.ɵɵadvance();
             i0.ɵɵproperty("ngIf", ctx.subitems && ctx.visibleSubitems);
-        } }, dependencies: [ContextMenuItemComponent], styles: ["@charset \"UTF-8\";.hasSubitems[_nghost-%COMP%]:after{content:\"\\25ba\";position:absolute;opacity:.6;right:5px;top:5px;font-family:initial}.subitems[_ngcontent-%COMP%]{position:absolute;top:0;left:100%;width:120px}", ".block[_ngcontent-%COMP%]{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block[_ngcontent-%COMP%]:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block[_ngcontent-%COMP%]:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block[_ngcontent-%COMP%]:hover{background-color:#8299ffcc}"] });
+        } }, dependencies: [ContextMenuItemComponent, CommonModule, i1.NgForOf, i1.NgIf], styles: ["@charset \"UTF-8\";.hasSubitems[_nghost-%COMP%]:after{content:\"\\25ba\";position:absolute;opacity:.6;right:5px;top:5px;font-family:initial}.subitems[_ngcontent-%COMP%]{position:absolute;top:0;left:100%;width:120px}", ".block[_ngcontent-%COMP%]{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block[_ngcontent-%COMP%]:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block[_ngcontent-%COMP%]:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block[_ngcontent-%COMP%]:hover{background-color:#8299ffcc}"] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ContextMenuItemComponent, [{
         type: Component,
         args: [{ selector: 'context-menu-item', host: {
                     'data-testid': 'context-menu-item'
-                }, template: "<ng-content></ng-content>\n<div class=\"subitems\" *ngIf=\"subitems && visibleSubitems\">\n  <context-menu-item *ngFor=\"let item of subitems\" [delay]=\"delay\" (select)=\"item.handler()\" (hide)=\"hide.emit()\">\n    {{ item.label }}\n  </context-menu-item>\n</div>\n", styles: ["@charset \"UTF-8\";:host(.hasSubitems):after{content:\"\\25ba\";position:absolute;opacity:.6;right:5px;top:5px;font-family:initial}.subitems{position:absolute;top:0;left:100%;width:120px}\n", ".block{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block:hover{background-color:#8299ffcc}\n"] }]
+                }, imports: [
+                    CommonModule
+                ], template: "<ng-content></ng-content>\n<div class=\"subitems\" *ngIf=\"subitems && visibleSubitems\">\n  <context-menu-item *ngFor=\"let item of subitems\" [delay]=\"delay\" (select)=\"item.handler()\" (hide)=\"hide.emit()\">\n    {{ item.label }}\n  </context-menu-item>\n</div>\n", styles: ["@charset \"UTF-8\";:host(.hasSubitems):after{content:\"\\25ba\";position:absolute;opacity:.6;right:5px;top:5px;font-family:initial}.subitems{position:absolute;top:0;left:100%;width:120px}\n", ".block{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block:hover{background-color:#8299ffcc}\n"] }]
     }], () => [{ type: i0.ChangeDetectorRef }], { subitems: [{
             type: Input
         }], delay: [{
@@ -617,7 +619,7 @@ class ContextMenuItemComponent {
             type: HostListener,
             args: ['pointerleave']
         }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(ContextMenuItemComponent, { className: "ContextMenuItemComponent", filePath: "presets/context-menu/components/item/item.component.ts", lineNumber: 13 }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(ContextMenuItemComponent, { className: "ContextMenuItemComponent", filePath: "presets/context-menu/components/item/item.component.ts", lineNumber: 17 }); })();
 
 class ContextMenuSearchComponent {
     value;
@@ -718,7 +720,8 @@ class ContextMenuComponent {
             i0.ɵɵadvance();
             i0.ɵɵproperty("ngForOf", ctx.getItems());
         } }, dependencies: [ContextMenuItemComponent,
-            ContextMenuSearchComponent], styles: ["[_nghost-%COMP%]{display:block;padding:10px;width:120px;margin-top:-20px;margin-left:-60px}", ".block[_ngcontent-%COMP%]{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block[_ngcontent-%COMP%]:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block[_ngcontent-%COMP%]:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block[_ngcontent-%COMP%]:hover{background-color:#8299ffcc}"] });
+            ContextMenuSearchComponent,
+            CommonModule, i1.NgForOf, i1.NgIf], styles: ["[_nghost-%COMP%]{display:block;padding:10px;width:120px;margin-top:-20px;margin-left:-60px}", ".block[_ngcontent-%COMP%]{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block[_ngcontent-%COMP%]:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block[_ngcontent-%COMP%]:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block[_ngcontent-%COMP%]:hover{background-color:#8299ffcc}"] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ContextMenuComponent, [{
         type: Component,
@@ -726,7 +729,8 @@ class ContextMenuComponent {
                     'data-testid': 'context-menu'
                 }, imports: [
                     ContextMenuItemComponent,
-                    ContextMenuSearchComponent
+                    ContextMenuSearchComponent,
+                    CommonModule
                 ], template: "<div class=\"block\" *ngIf=\"searchBar\">\n  <context-menu-search [value]=\"filter\" (update)=\"setFilter($event)\"></context-menu-search>\n</div>\n\n<context-menu-item *ngFor=\"let item of getItems()\" [delay]=\"delay\" (select)=\"item.handler()\" [subitems]=\"item.subitems\"\n  (hide)=\"onHide()\">\n  {{ item.label }}\n</context-menu-item>\n", styles: [":host{display:block;padding:10px;width:120px;margin-top:-20px;margin-left:-60px}\n", ".block{display:block;color:#fff;padding:4px;border-bottom:1px solid rgba(69,103,255,.8);background-color:#6e88ffcc;cursor:pointer;width:100%;position:relative}.block:first-child{border-top-left-radius:5px;border-top-right-radius:5px}.block:last-child{border-bottom-left-radius:5px;border-bottom-right-radius:5px}.block:hover{background-color:#8299ffcc}\n"] }]
     }], () => [{ type: i0.ChangeDetectorRef }], { items: [{
             type: Input
@@ -748,7 +752,7 @@ class ContextMenuComponent {
             type: HostListener,
             args: ['mouseleave']
         }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(ContextMenuComponent, { className: "ContextMenuComponent", filePath: "presets/context-menu/components/menu/menu.component.ts", lineNumber: 18 }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(ContextMenuComponent, { className: "ContextMenuComponent", filePath: "presets/context-menu/components/menu/menu.component.ts", lineNumber: 20 }); })();
 
 /**
  * Preset for rendering context menu.
@@ -1019,7 +1023,8 @@ class MinimapComponent {
             i0.ɵɵadvance();
             i0.ɵɵproperty("left", ctx.viewport.left)("top", ctx.viewport.top)("width", ctx.viewport.width)("height", ctx.viewport.height)("containerWidth", ctx.el.nativeElement == null ? null : ctx.el.nativeElement.clientWidth)("translate", ctx.translate);
         } }, dependencies: [MiniViewportComponent,
-            MiniNodeComponent], styles: ["[_nghost-%COMP%]{position:absolute;right:24px;bottom:24px;background:#e5eaefa6;padding:20px;overflow:hidden;border:1px solid #b1b7ff;border-radius:8px;box-sizing:border-box}"] });
+            MiniNodeComponent,
+            CommonModule, i1.NgForOf], styles: ["[_nghost-%COMP%]{position:absolute;right:24px;bottom:24px;background:#e5eaefa6;padding:20px;overflow:hidden;border:1px solid #b1b7ff;border-radius:8px;box-sizing:border-box}"] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MinimapComponent, [{
         type: Component,
@@ -1027,7 +1032,8 @@ class MinimapComponent {
                     'data-testid': 'minimap'
                 }, imports: [
                     MiniViewportComponent,
-                    MiniNodeComponent
+                    MiniNodeComponent,
+                    CommonModule
                 ], template: "<minimap-mini-node *ngFor=\"let node of nodes; trackBy: identifyMiniNode\" [left]=\"scale(node.left)\"\n  [top]=\"scale(node.top)\" [width]=\"scale(node.width)\" [height]=\"scale(node.height)\">\n\n</minimap-mini-node>\n<minimap-mini-viewport [left]=\"viewport.left\" [top]=\"viewport.top\" [width]=\"viewport.width\" [height]=\"viewport.height\"\n  [containerWidth]=\"el.nativeElement?.clientWidth\" [translate]=\"translate\"></minimap-mini-viewport>\n", styles: [":host{position:absolute;right:24px;bottom:24px;background:#e5eaefa6;padding:20px;overflow:hidden;border:1px solid #b1b7ff;border-radius:8px;box-sizing:border-box}\n"] }]
     }], () => [{ type: i0.ElementRef }, { type: i0.ChangeDetectorRef }], { rendered: [{
             type: Input
@@ -1056,7 +1062,7 @@ class MinimapComponent {
             type: HostListener,
             args: ['dblclick', ['$event']]
         }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(MinimapComponent, { className: "MinimapComponent", filePath: "presets/minimap/components/minimap/minimap.component.ts", lineNumber: 17 }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(MinimapComponent, { className: "MinimapComponent", filePath: "presets/minimap/components/minimap/minimap.component.ts", lineNumber: 19 }); })();
 
 /**
  * Preset for rendering minimap.
@@ -1224,12 +1230,14 @@ class PinsComponent {
             i0.ɵɵtemplate(0, PinsComponent_reroute_pin_0_Template, 1, 3, "reroute-pin", 0);
         } if (rf & 2) {
             i0.ɵɵproperty("ngForOf", ctx.pins)("ngForTrackBy", ctx.track);
-        } }, dependencies: [PinComponent], encapsulation: 2 });
+        } }, dependencies: [PinComponent,
+            CommonModule, i1.NgForOf], encapsulation: 2 });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PinsComponent, [{
         type: Component,
         args: [{ imports: [
-                    PinComponent
+                    PinComponent,
+                    CommonModule
                 ], template: "<reroute-pin *ngFor=\"let pin of pins; trackBy: track\" [position]=\"pin.position\" [selected]=\"pin.selected\"\n  (menu)=\"menu && menu(pin.id)\" (translate)=\"translate && translate(pin.id, $event.dx, $event.dy)\"\n  (down)=\"down && down(pin.id)\" [getPointer]=\"getPointer\"></reroute-pin>\n" }]
     }], () => [{ type: i0.ChangeDetectorRef }], { rendered: [{
             type: Input
@@ -1244,7 +1252,7 @@ class PinsComponent {
         }], getPointer: [{
             type: Input
         }] }); })();
-(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(PinsComponent, { className: "PinsComponent", filePath: "presets/reroute/components/pins/pins.component.ts", lineNumber: 11 }); })();
+(() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassDebugInfo(PinsComponent, { className: "PinsComponent", filePath: "presets/reroute/components/pins/pins.component.ts", lineNumber: 13 }); })();
 
 /**
  * Preset for rendering pins.
@@ -1349,7 +1357,9 @@ class ReteModule {
 class ReteContextMenuModule {
     static ɵfac = function ReteContextMenuModule_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || ReteContextMenuModule)(); };
     static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ReteContextMenuModule });
-    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule] });
+    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule,
+            ContextMenuComponent,
+            ContextMenuItemComponent] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ReteContextMenuModule, [{
         type: NgModule,
@@ -1377,7 +1387,8 @@ class ReteContextMenuModule {
 class ReteMinimapModule {
     static ɵfac = function ReteMinimapModule_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || ReteMinimapModule)(); };
     static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ReteMinimapModule });
-    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule] });
+    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule,
+            MinimapComponent] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ReteMinimapModule, [{
         type: NgModule,
@@ -1405,7 +1416,8 @@ class ReteMinimapModule {
 class ReteRerouteModule {
     static ɵfac = function ReteRerouteModule_Factory(__ngFactoryType__) { return new (__ngFactoryType__ || ReteRerouteModule)(); };
     static ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ReteRerouteModule });
-    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule] });
+    static ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [CommonModule,
+            PinsComponent] });
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ReteRerouteModule, [{
         type: NgModule,
